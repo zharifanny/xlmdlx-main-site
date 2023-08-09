@@ -1,0 +1,136 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+typedef int larik [10]; //tipe data untuk merge
+void baca_data(int A[], int n){
+	//proses input dan baca data
+	for(int i=0; i<n; i++){
+		cout<<"Data ke - "<<i+1<<" : ";
+		cin >> A[i];
+	}
+}
+
+void cetak_data(int A[], int n){
+	//cetak data
+	for(int i=0; i<n; i++){
+		cout<<A[i]<<" ";
+	}
+}
+
+void tukar_data(int *a, int *b){
+	//tukar data
+	int temp;
+	temp=*a;
+	*a=*b;
+	*b=temp;
+}
+
+void minimum(int A[], int dari, int n, int *tempat){
+	int i, min;
+	min=A[dari];
+	*tempat=dari;
+	for(i=dari+1; i<n; i++)
+		if(A[i]<min){
+			min=A[i];
+			*tempat=i;
+		}
+}
+
+
+
+void Merge(int *a, int low, int high, int mid){
+	int i, j, k, temp[high-low+1];
+	i = low;
+	k = 0;
+	j = mid + 1;
+	while (i <= mid && j <= high){
+		if (a[i] < a[j]){
+			temp[k] = a[i];
+			k++;
+			i++;
+		}
+		else{
+			temp[k] = a[j];
+			k++;
+			j++;
+		}
+	}
+	while (i <= mid){
+		temp[k] = a[i];
+		k++;
+		i++;
+	}
+	while (j <= high){
+		temp[k] = a[j];
+		k++;
+		j++;
+	}
+	for (i = low; i <= high; i++){
+		a[i] = temp[i-low];
+	}
+}
+
+void MergeSort(int *a, int low, int high){
+	int mid;
+	if (low < high)
+	{
+		mid=(low+high)/2;
+		// Split the data into two half.
+		MergeSort(a, low, mid);
+		MergeSort(a, mid+1, high);
+ 
+		// Merge them to get sorted output.
+		Merge(a, low, high, mid);
+	}
+}
+
+int partition(int A[], int low, int high){
+    int pivot = A[high];
+    int i = (low - 1); 
+
+    for (int j = low; j < high; j++){
+
+        if (A[j] <= pivot){
+            i++;
+            int temp = A[i];
+            A[i] = A[j];
+            A[j] = temp;
+        }
+    }
+    int temp = A[i + 1];
+    A[i + 1] = A[high];
+    A[high] = temp;
+    return (i + 1);
+}
+
+
+int main(int argc, char *argv[]){
+	int data[10], n;
+	int pilih;
+	t1:
+	//	<<"Divide and conquer\n\n";
+	
+
+//			case 3://merge sort
+				cout<<"MERGE SORT";
+				cout<<"\n\nMasukan data : ";
+				cin>>n;
+				baca_data(data, n);
+				cout<<"Data yang anda masukan : ";
+				cetak_data(data, n);
+				cout<<endl;
+				MergeSort(data, 0, n-1);
+				cout<<"Setelah ditukar (Merge Sort): ";
+				cetak_data(data, n);
+				cout<<endl;
+//				break;
+
+				goto t1;
+	//	}
+		system("PAUSE");
+		return EXIT_SUCCESS;
+}
+
+
+

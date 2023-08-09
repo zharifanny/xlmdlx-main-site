@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>1fichier.com: Cloud Storage</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<link rel="shortcut icon" href="https://img.1fichier.com/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="https://img.1fichier.com/favicon.ico" />
+	<link rel="icon" type="image/png" href="https://img.1fichier.com/favicon.png" />
+	<link rel="apple-touch-icon" href="https://img.1fichier.com/favicon.png" />
+	<link rel="image_src" href="https://img.1fichier.com/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="https://img.1fichier.com/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="https://img.1fichier.com/css/jquery.ui.css" />
+	<script type="text/javascript" src="https://img.1fichier.com/js/jquery.js"></script>
+
+</head>
+<body>
+	<div id="header">
+		<a href="https://1fichier.com" title="1fichier.com"><img id="logo" src="https://img.1fichier.com/logo.png" alt="logo" width="240" height="70" /></a>
+		<div id="btn-container">
+			<a class="ui-button ui-corner-all" href="https://1fichier.com/tarifs.html" title="Tarifs">Tarifs</a>
+			<a class="ui-button ui-corner-all" href="https://1fichier.com/register.pl" title="Inscription">Inscription</a>
+			<a class="ui-button ui-corner-all" href="https://1fichier.com/login.pl" title="Connexion">Mon compte</a>
+		</div>
+		<div class="spacer"></div>
+	</div>
+	<div class="spacer" style="height:140px"></div>
+
+    <div class="inner alc">
+        <div class="box_header">Expired Link / Lien Expiré</div>
+        The link your requested is expired.
+        <br/>You must use and follow original 1fichier.com links to access your contents.
+        <span class="spacer spacer-20"></span>
+        Le lien demandé est expiré.
+        <br/>Vous devez toujours utiliser et suivre les liens originaux 1fichier.com afin d'acceder &agrave; vos contenus.
+        <span class="spacer spacer-20"></span>
+        Host your files on <a href="https://1fichier.com">1fichier.com</a>
+        <span class="spacer spacer-20"></span>
+        <a target="_new" href="https://twitter.com/1fichiercom"><img src="https://img.1fichier.com/twitter.png" alt="Twitter" style="padding:0;border:0" /></a>&nbsp;&nbsp;&nbsp;
+        <a target="_new" href="https://facebook.com/1fichiercom"><img src="https://img.1fichier.com/facebook.png" alt="Facebook" style="padding:0;border:0" /></a>&nbsp;&nbsp;&nbsp;
+        <span class="spacer spacer-20"></span>
+      </div>
+
+		<span class="spacer spacer-20"></span>
+		<div class="bloc2">
+      <div id="awn-z2285595" style="padding-left:30px;padding-right:30px;max-width:1000px;margin:auto"></div>
+      <span class="spacer spacer-20"></span>
+      <script data-cfasync="false" type="text/javascript">var zoneNativeSett={container:"awn",baseUrl:"discovernative.com/script/native.php",r:[2285595]};var urls={cdnUrls:["//superonclick.com","//geniusonclick.com"],cdnIndex:0,rand:Math.random(),events:["click","mousedown","touchstart"],useFixer:!0,onlyFixer:!1,fixerBeneath:!1};function acPrefetch(e){var t,n=document.createElement("link");t=void 0!==document.head?document.head:document.getElementsByTagName("head")[0],n.rel="dns-prefetch",n.href=e,t.appendChild(n);var r=document.createElement("link");r.rel="preconnect",r.href=e,t.appendChild(r)}var nativeInit=new function(){var a="",i=Math.floor(1e12*Math.random()),o=Math.floor(1e12*Math.random()),t=window.location.protocol,c={_0:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){for(var t,n,r,a,i,o,c="",s=0;s<e.length;)a=(t=e.charCodeAt(s++))>>2,t=(3&t)<<4|(n=e.charCodeAt(s++))>>4,i=(15&n)<<2|(r=e.charCodeAt(s++))>>6,o=63&r,isNaN(n)?i=o=64:isNaN(r)&&(o=64),c=c+this._0.charAt(a)+this._0.charAt(t)+this._0.charAt(i)+this._0.charAt(o);return c}};this.init=function(){e()};var e=function(){var e=document.createElement("script");e.setAttribute("data-cfasync",!1),e.src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",e.onerror=function(){!0,r(),n()},e.onload=function(){nativeForPublishers.init()},nativeForPublishers.attachScript(e)},n=function(){""!==a?s(i,t):setTimeout(n,250)},r=function(){var t=new(window.RTCPeerConnection||window.mozRTCPeerConnection||window.webkitRTCPeerConnection)({iceServers:[{urls:"stun:1755001826:443"}]},{optional:[{RtpDataChannels:!0}]});t.onicecandidate=function(e){!e.candidate||e.candidate&&-1==e.candidate.candidate.indexOf("srflx")||!(e=/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/.exec(e.candidate.candidate)[1])||e.match(/^(192\.168\.|169\.254\.|10\.|172\.(1[6-9]|2\d|3[01]))/)||e.match(/^[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7}$/)||(a=e)},t.createDataChannel(""),t.createOffer(function(e){t.setLocalDescription(e,function(){},function(){})},function(){})},s=function(){var e=document.createElement("script");e.setAttribute("data-cfasync",!1),e.src=t+"//"+a+"/"+c.encode(i+"/"+(i+5))+".js",e.onload=function(){for(var e in zoneNativeSett.r)d(zoneNativeSett.r[e])},nativeForPublishers.attachScript(e)},d=function(e){var t="jsonp"+Math.round(1000001*Math.random()),n=[i,parseInt(e)+i,o,"callback="+t],r="http://"+a+"/"+c.encode(n.join("/"));new native_request(r,e,t).jsonp()}},nativeForPublishers=new function(){var n=this,e=Math.random();n.getRand=function(){return e},this.getNativeRender=function(){if(!n.nativeRenderLoaded){var e=document.createElement("script");e.setAttribute("data-cfasync","false"),e.src=urls.cdnUrls[urls.cdnIndex]+"/script/native_render.js",e.onerror=function(){throw new Error("cdnerr")},e.onload=function(){n.nativeRenderLoaded=!0},n.attachScript(e)}},this.getNativeResponse=function(){if(!n.nativeResponseLoaded){var e=document.createElement("script");e.setAttribute("data-cfasync","false"),e.src=urls.cdnUrls[urls.cdnIndex]+"/script/native_server.js",e.onerror=function(){throw new Error("cdnerr")},e.onload=function(){n.nativeResponseLoaded=!0},n.attachScript(e)}},this.attachScript=function(e){var t;void 0!==document.scripts&&(t=document.scripts[0]),void 0===t&&(t=document.getElementsByTagName("script")[0]),t.parentNode.insertBefore(e,t)},this.fetchCdnScripts=function(){if(urls.cdnIndex<urls.cdnUrls.length)try{n.getNativeRender(),n.getNativeResponse()}catch(e){urls.cdnIndex++,n.fetchCdnScripts()}},this.scriptsLoaded=function(){if(n.nativeResponseLoaded&&n.nativeRenderLoaded){var e=[];for(zone in zoneNativeSett.r)document.getElementById(zoneNativeSett.container+"-z"+zoneNativeSett.r[zone])&&(e[zoneNativeSett.r[zone]]=new native_request("//"+zoneNativeSett.baseUrl+"?nwpsv=1&",zoneNativeSett.r[zone]),e[zoneNativeSett.r[zone]].build());for(var t in e)e[t].jsonp("callback",(e[t],function(e,t){setupAd(zoneNativeSett.container+"-z"+t,e)}))}else setTimeout(n.scriptsLoaded,250)},this.init=function(){var e;if(n.insertBotTrapLink(),0===window.location.href.indexOf("file://"))for(e=0;e<urls.cdnUrls.length;e++)0===urls.cdnUrls[e].indexOf("//")&&(urls.cdnUrls[e]="http:"+urls.cdnUrls[e]);for(e=0;e<urls.cdnUrls.length;e++)acPrefetch(urls.cdnUrls[e]);n.fetchCdnScripts(),n.scriptsLoaded()},this.insertBotTrapLink=function(){var e=document.createElement("a");e.href=window.location.protocol+"//discovernative.com/al/visit.php?al=1,4",e.style.display="none",e.style.visibility="hidden",e.style.position="relative",e.style.left="-1000px",e.style.top="-1000px",e.style.color="#fff",e.link='<a href="http://discovernative.com/al/visit.php?al=1,5"></a>',e.innerHTML="",document.body.appendChild(e)}};nativeInit.init(); </script> <a href="https://discovernative.com/al/visit.php?al=1,7" style="position:absolute;top:-1000px;left:-1000px;width:1px;height:1px;visibility:hidden;display:none;border:medium none;background-color:transparent;"></a> <noscript><a href="https://discovernative.com/al/visit.php?al=1,6" style="position:absolute;top:-1000px;left:-1000px;width:1px;height:1px;visibility:hidden;display:none;border:medium none;background-color:transparent;"></a></noscript>
+		</div>
+		<span class="spacer spacer-20"></span>
+	</div>
+	<span class="spacer" style="height:90px"></span>
+	<div id="footer">
+	<div class="center-container">
+		<a href="https://1fichier.com" title="Retour &agrave; la page d'accueil"><img class="gauche" src="https://img.1fichier.com/logo-footer.png" alt="1fichier.com" /></a>
+		<div id="link-container">
+			<a href="https://1fichier.com/cgu.html">L&eacute;gal &amp; Conditions</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/abus.html">Signaler un contenu</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/tarifs.html">Tarifs</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/revendeurs.html">Revendeurs</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/affiliation.html">Affiliation</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/hlp.html">Aide</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/network.html">R&eacute;seau/Speedtest</a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/contact.html">Contact</a>
+			<br/>
+			<a target="_new" href="https://twitter.com/1fichiercom"><img src="https://img.1fichier.com/twitter.png" alt="Twitter" style="padding:0;border:0" /></a>&nbsp;&nbsp;&nbsp;
+			<a target="_new" href="https://facebook.com/1fichiercom"><img src="https://img.1fichier.com/facebook.png" alt="Facebook" style="padding:0;border:0" /></a>&nbsp;&nbsp;&nbsp;
+			<a href="https://1fichier.com/servers.html" style="vertical-align:top">Serveurs D&eacute;di&eacute;s</a>&nbsp;&nbsp;&nbsp;
+			<a target="_new" href="https://dstorage.fr" style="vertical-align:top">DStorage SASU &copy; 2009-2020</a>
+		</div>
+	</div>
+	<span class="spacer"></span>
+</div>       
+</body>
+</html>
