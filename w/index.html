@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Center the text horizontally and vertically */
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+            color: white;
+            /* Adjust as needed */
+        }
+
+        /* Style for the typing cursor */
+        .typed-cursor {
+            display: inline-block;
+            animation: blink 0.7s infinite;
+        }
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="../drag.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+
+
+<body body style="background-color:black">
+    <div class="centered-container">
+        <span id="element" class="typed-cursor"></span>
+    </div>
+
+    <!-- Setup and start animation! -->
+<!--
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+            typeSpeed: 50,
+            loop: true,
+        });
+    </script>
+-->
+    <script>
+          var typed5 = new Typed('#element', {
+    strings: ['khindy <i>zharifany</i>', '<strong>forssellfritz</strong>', 'based on reality', 'joni f', 'pacitan', 'yogyakarta', 'tanjung balai karimun', 'compton', 'thv', 'G-Dragon'],
+    typeSpeed: 0,
+    backSpeed: 0,
+    typeSpeed: 60,
+    cursorChar: '_',
+    shuffle: true,
+    smartBackspace: false,
+    loop: true
+  });
+    
+    </script>
+
+</body>
+
+</html>
