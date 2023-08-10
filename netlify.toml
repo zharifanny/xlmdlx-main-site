@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "/404.shtml" #-change-path-here-and-delete-this-comment
+  to = "/404.shtml" 
   status = 404
