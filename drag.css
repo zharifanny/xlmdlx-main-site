@@ -245,6 +245,23 @@
   transform: translate(-50%, -50%);
 }
 
+        /* Center the text horizontally and vertically */
+        .centered-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          font-size: 43px;
+          color: white;
+          /* Adjust as needed */
+      }
+
+      /* Style for the typing cursor */
+      .typed-cursor {
+          display: inline-block;
+          animation: blink 0.7s infinite;
+      }
+
 .centered-w {
   margin: 0;
   position: absolute;

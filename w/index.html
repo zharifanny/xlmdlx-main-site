@@ -2,23 +2,9 @@
 <html>
 
 <head>
+    <script src="../src/req.js"></script>
     <style>
-        /* Center the text horizontally and vertically */
-        .centered-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-size: 43px;
-            color: white;
-            /* Adjust as needed */
-        }
 
-        /* Style for the typing cursor */
-        .typed-cursor {
-            display: inline-block;
-            animation: blink 0.7s infinite;
-        }
     </style>
     <title>_____word</title>
 
@@ -32,32 +18,8 @@
     <div class="centered-container">
         <span id="element" class="typed-cursor"></span>
     </div>
-
-    <!-- Setup and start animation! -->
-    <!--
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
-            typeSpeed: 50,
-            loop: true,
-        });
-    </script>
-    -->
     
-    <script>
-        var typed5 = new Typed('#element', {
-            strings: ['khindy <i>zharifany</i>', '<strong>forssellfritz</strong>', 'based on reality', '<b>xlmdlx</b>', 'pacitan', 'kota yogyakarta', 'karimun', 'compton', 'thv', '<s>peaceminusone</s>',
-                'a ▀▀▀▀▀▀▀▀', 'bright character',],
-            typeSpeed: 0,
-            backSpeed: 0,
-            typeSpeed: 40,
-            cursorChar: '_',
-            shuffle: true,
-            smartBackspace: false,
-            loop: true
-        });
-
-    </script>
+    <script src="../src/word.js"></script>
 
 </body>
 
