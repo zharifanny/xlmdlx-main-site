@@ -13,6 +13,11 @@
   touch-action: none;
 }
 
+.zoomed {
+  transform: scale(2); /* You can adjust the scale factor as needed */
+  transition: transform 0.3s ease; /* Add a smooth transition for zooming */
+}
+
   .draggable.switch-bg {
     background-size: 100%;
   }
@@ -25,6 +30,8 @@
     -o-transition: width 0.5s;
     transition: width 0.5s;
   }
+
+
 
   .draggable.switch-bg img {
   width: 200%;
