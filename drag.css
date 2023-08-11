@@ -298,7 +298,7 @@
 .centered-w {
   margin: 1;
   position: absolute;
-  font-size: 14px;
+  font-size: 16px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
