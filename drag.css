@@ -93,16 +93,18 @@
     top: 38%;
   }
 
+  #ibuk {
+    left: 2%;
+    top: 75%; 
+  }
+
 #ayaka {
     left: 30%;
     top: .5%;
     display: block;
 }
 
-#ibuk {
-  left: 2%;
-  top: 75%; 
-}
+
 
 
 
