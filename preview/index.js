@@ -7,7 +7,8 @@ const canvas = document.querySelector('.webgl');
 const scene = new THREE.Scene();
 
 const loader = new GLTFLoader();
-loader.load('assets/Scene.glb', function (gltf) {
+loader.load('assets/Scene.glb', function (gltf) // load a glTF resource
+{ 
     const root = gltf.scene;
     root.scale.set(0.3, 0.3, 0.3);
     root.name = 'ayaka6';

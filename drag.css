@@ -107,6 +107,17 @@
 #ical {
   left: 65%;
   top:5%;
+
+}
+
+#ppt {
+  left: 9%;
+  top: 45%;
+}
+
+#scan {
+  left:45%;
+  top: 75%;
 }
 
 #ical01 {
@@ -126,12 +137,22 @@
 
 #agenta {
   left: 55.9%;
-  top: 55%;
+  top: 15%;
+}
+
+#kawah {
+  left: 3.9%;
+  top: -15%;
 }
 
 #weak {
   left: 31.9%;
   top: 44%;
+}
+
+#masuke {
+  left : 75%;
+  top: 70%;
 }
 
 #container {
