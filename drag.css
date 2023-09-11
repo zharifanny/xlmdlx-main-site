@@ -18,22 +18,21 @@
   transition: transform 0.3s ease; /* Add a smooth transition for zooming */
 }
 
-  .draggable.switch-bg {
-    background-size: 100%;
-  }
-  
-  .draggable img { /*buat resize img (keknya) */
-    width: 100%;
-    height: auto;
-    -webkit-transition: width 0.5s;
-    -moz-transition: width 0.5s;
-    -o-transition: width 0.5s;
-    transition: width 0.5s;
-  }
+.draggable.switch-bg {
+  background-size: 100%;
+}
 
+.draggable img {
+  /*buat resize img (keknya) */
+  width: 100%;
+  height: auto;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+}
 
-
-  .draggable.switch-bg img {
+.draggable.switch-bg img {
   width: 200%;
   -webkit-transition: width 0.5s;
   -moz-transition: width 0.5s;
@@ -41,82 +40,73 @@
   transition: width 0.5s;
 }
 
-  .draggable video { /*buat resize vid (keknya) */
-    width: 100%;
-    height: auto;
-  
-    -webkit-transition: width 0.5s;
-    -moz-transition: width 0.5s;
-    -o-transition: width 0.5s;
-    transition: width 0.5s;
-  }
+.draggable video {
+  /*buat resize vid (keknya) */
+  width: 100%;
+  height: auto;
 
-  .draggable.switch-bg video { /*zoom in or outz vid*/
-    width: 150%;
-    -webkit-transition: width 0.5s;
-    -moz-transition: width 0.5s;
-    -o-transition: width 0.5s;
-    transition: width 0.5s;
-  }
-
-  .draggable div { /*text inside image*/
-    display: none;
-    background-color: #212121d1;
-    text-align: left;
-    width: 120%;
-    padding: 4%;
-    left: 200px;
-    top: 20px;
-    font-size: x-small;
-    color: #c3c3c3;
-    margin: left;
-  }
-  
-  .draggable.switch-bg div {
-    display: block;
-  }
-  
-
-
-
-
-  #dragging{
-    left: 38%;
-    top: 28%;
-  }
-
-  
-
-  #wg {
-
-    left: 45%;
-    top: 38%;
-  }
-
-  #ibuk {
-    left: 2%;
-    top: 75%; 
-  }
-
-#ayaka {
-    left: 30%;
-    top: .5%;
-    display: block;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
+.draggable.switch-bg video {
+  /*zoom in or outz vid*/
+  width: 150%;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+}
 
+.draggable div {
+  /*text inside image*/
+  display: none;
+  background-color: #212121d1;
+  text-align: left;
+  width: 120%;
+  padding: 4%;
+  left: 200px;
+  top: 20px;
+  font-size: x-small;
+  color: #c3c3c3;
+  margin: left;
+}
 
+.draggable.switch-bg div {
+  display: block;
+}
 
+#dragging {
+  left: 38%;
+  top: 28%;
+}
+
+#wg {
+  left: 45%;
+  top: 38%;
+}
+
+#ibuk {
+  left: 2%;
+  top: 75%;
+}
+
+#ayaka {
+  left: 30%;
+  top: 0.5%;
+  display: block;
+}
 
 #blue {
   left: 2%;
-  top:75%;
+  top: 75%;
 }
 
 #ical {
   left: 65%;
-  top:5%;
-
+  top: 5%;
 }
 
 #ppt {
@@ -125,13 +115,13 @@
 }
 
 #scan {
-  left:45%;
+  left: 45%;
   top: 75%;
 }
 
 #ical01 {
   left: 20%;
-  top:85%;
+  top: 85%;
 }
 
 #tat {
@@ -160,7 +150,7 @@
 }
 
 #masuke {
-  left : 75%;
+  left: 75%;
   top: 70%;
 }
 
@@ -236,32 +226,30 @@
   font-family: "Helvetica", "Rubik", "Segoe UI", sans-serif;
 }
 
-.whitemid{
+.whitemid {
   text-align: center;
   color: white;
   text-decoration: none;
 }
 
-.none{
-    text-decoration: none;
-    color: #737373;
-}
-
-.footermain{
+.none {
   text-decoration: none;
   color: #737373;
 }
 
-.none1{
+.footermain {
+  text-decoration: none;
+  color: #737373;
+}
+
+.none1 {
   text-decoration: none;
   color: yellow;
 }
 
-.centerandmiddle{
+.centerandmiddle {
   text-align: center;
 }
-
-
 
 .container {
   color: whitesmoke;
@@ -271,7 +259,6 @@
   height: 600px;
 }
 
-
 .centered-element {
   margin: 0;
   position: absolute;
@@ -280,22 +267,22 @@
   transform: translate(-50%, -50%);
 }
 
-        /* Center the text horizontally and vertically */
-        .centered-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          font-size: 43px;
-          color: white;
-          /* Adjust as needed */
-      }
+/* Center the text horizontally and vertically */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 43px;
+  color: white;
+  /* Adjust as needed */
+}
 
-      /* Style for the typing cursor */
-      .typed-cursor {
-          display: inline-block;
-          animation: blink 0.7s infinite;
-      }
+/* Style for the typing cursor */
+.typed-cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
 
 .centered-w {
   margin: 1;
@@ -324,7 +311,6 @@ a:hover {
   user-select: none;
 }
 
-
 .disabled {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -339,7 +325,6 @@ a:hover {
   font-size: x-large;
 }
 
-
 .emojihidden {
   display: none;
 }
@@ -348,7 +333,6 @@ a:hover {
   color: #fff;
   font-weight: bold;
 }
-
 
 #spotify {
   text-align: center;
@@ -359,7 +343,7 @@ a:hover {
   top: 15px;
 }
 
-#mh{
+#mh {
   left: 55px;
 }
 
