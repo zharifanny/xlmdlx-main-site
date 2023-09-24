@@ -55,7 +55,7 @@ function updateTickerText(tickerInner) {
 
 // Create initial ticker elements
 const tickerInnerElements = [];
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 50; i++) {
   tickerInnerElements.push(createTickerInner());
 }
 
