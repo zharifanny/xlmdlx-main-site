@@ -10,9 +10,10 @@ const blueValleyHeadlines = [
     { headline: "compton", isPositive: false },
     { headline: "thv", isPositive: false },
     { headline: "<s>peaceminusone</s>", isPositive: false },
-    { headline: "a ▀▀▀▀▀▀▀▀", isPositive: false },
     { headline: "bright character", isPositive: true },
     { headline: "california", isPositive: false },
+    { headline: "vngnc", isPositive: false },
+    { headline: "izzy", isPositive: false },
     { headline: "sacramento", isPositive: false },
     { headline: "marshall mathers", isPositive: false },
     { headline: "morii aimi", isPositive: true },
@@ -26,6 +27,5 @@ const blueValleyHeadlines = [
     { headline: "pesawat kertas 365 hari", isPositive: false },
     { headline: "misuh, monolog, mokok", isPositive: true },
     { headline: "searchlight", isPositive: false },
-    { headline: "", isPositive: false },
-    { headline: "john & david", isPositive: false },
+    { headline: "john & david", isPositive: false }
 ];

@@ -3,9 +3,10 @@
 
 :root {
   --scroll-speed: 2s;
-  --positive-color: #03e610;
-  --negative-color: #fe0000;
-  --size: 2rem;
+  --positive-color: #717171;
+  /* --positive-color: #00ff00; */
+  --negative-color: #ffffff;
+  --size: 32px;
 }
 
 body,
@@ -24,13 +25,13 @@ html {
   width: 100%;
   height: auto;
   white-space: nowrap;
-  overflow: hidden;
-  position: relative;
+  overflow: hidden; 
+  position:relative; 
   display: flex;
   flex-direction: column;
   gap: var(--size/2);
   font-size: var(--size);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   transition: all 1s ease-in-out;
   /* background-color: #44991032; */
 }
@@ -73,6 +74,6 @@ html {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(10%);
+    transform: translateX(10%); /* 10% is arbitrary */
   }
 }

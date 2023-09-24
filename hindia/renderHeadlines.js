@@ -26,7 +26,7 @@ function generateSingleSentimentSpan(headlineObj) {
     ? "var(--positive-color)"
     : "var(--negative-color)";
   const text = headlineObj.headline;
-  return `<span style="color: ${color}; filter: drop-shadow(0 0 0.75rem ${color});">${text}</span>`;
+  return `<span style="color: ${color}; filter: drop-shadow(0 0 0.5rem ${color});">${text}</span>`;
 }
 
 // Get the ticker container
@@ -34,7 +34,7 @@ const ticker = document.getElementById("ticker");
 
 // Function to create a ticker-inner div with random text
 function createTickerInner() {
-  const delay = (delayMin + Math.random() * delayMax) - ((delayMax - delayMin) / 0.8);
+  const delay = (delayMin + Math.random() * delayMax) - ((delayMax - delayMin) / .8);
   const scrollSpeed = speedMin + Math.random() * speedMax;
   const blinkSpeed = blinkMin + Math.random() * blinkMax;
 
@@ -55,7 +55,7 @@ function updateTickerText(tickerInner) {
 
 // Create initial ticker elements
 const tickerInnerElements = [];
-for (let i = 0; i < 30; i++) {
+for (let i = 1; i < 50; i++) {
   tickerInnerElements.push(createTickerInner());
 }
 
@@ -63,5 +63,5 @@ for (let i = 0; i < 30; i++) {
 setInterval(() => {
   const randomIndex = Math.floor(Math.random() * tickerInnerElements.length);
   updateTickerText(tickerInnerElements[randomIndex]);
-}, 300);
+}, 200);
   
