@@ -26,7 +26,7 @@ function generateSingleSentimentSpan(headlineObj) {
     ? "var(--positive-color)"
     : "var(--negative-color)";
   const text = headlineObj.headline;
-  return `<span style="color: ${color}; filter: drop-shadow(0 0 2.5rem ${color});">${text}</span>`;
+  return `<span style="color: ${color}; filter: drop-shadow(0 0 0.75rem ${color});">${text}</span>`;
 }
 
 // Get the ticker container
