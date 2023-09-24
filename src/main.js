@@ -1,3 +1,4 @@
+//reading.js
 window.onload = function() {
     // Menggunakan XMLHttpRequest untuk membaca file teks
     var xhr = new XMLHttpRequest();
@@ -11,7 +12,7 @@ window.onload = function() {
     xhr.send();
 };
 
-//type
+//type.js
 var typed5 = new Typed('#element', {
     strings: ['khindy <i>zharifany</i>', '<strong>forssellfritz</strong>', 'based on reality', '<b>xlmdlx</b>', 'pacitan', 'kota yogyakarta', 'karimun', 'compton', 'thv', '<s>peaceminusone</s>',
         'a ▀▀▀▀▀▀▀▀', 'bright character','california','sacramento','marshall mathers', 'morii aimi', 'baskara putra','<strong>d.o</strong>', 'aftermath', 'synchronize','masuk-e','march 4th','14th season','pesawat kertas 365 hari','misuh, monolog, mokok','searchlight',],
