@@ -28,6 +28,4 @@ const blueValleyHeadlines = [
     { headline: "searchlight", isPositive: false },
     { headline: "", isPositive: false },
     { headline: "john & david", isPositive: false },
-    
-    
 ];

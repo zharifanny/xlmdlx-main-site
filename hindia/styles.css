@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-  --scroll-speed: 10s;
+  --scroll-speed: 2s;
   --positive-color: #03e610;
   --negative-color: #fe0000;
   --size: 2rem;
@@ -73,6 +73,6 @@ html {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(10%);
   }
 }
