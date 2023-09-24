@@ -1,64 +1,26 @@
 <!DOCTYPE html>
 <html>
-
-
-<head>
-    <link rel="stylesheet" type="text/css" href="../drag.css"> <!-- Drag css -->
+  <head>
+    <link rel="stylesheet" type="text/css" href="../drag.css" />
+    <!-- Drag css -->
     <script src="../src/req.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style></style>
     <title>log</title>
-    <link rel="stylesheet" type="text/css" href="../drag.css">
+    <link rel="stylesheet" type="text/css" href="../drag.css" />
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="../src/main.js"></script>
+  </head>
 
-    <script>
-        window.onload = function() {
-            // Menggunakan XMLHttpRequest untuk membaca file teks
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'message.txt', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var isiFileTeks = xhr.responseText;
-                    document.getElementById('hasil').textContent = isiFileTeks;
-                }
-            };
-            xhr.send();
-        };
-    </script>
-
-</head>
-
-<body style="background-color: black;">
+  <body style="background-color: black">
     <div class="fadein">
+      <!--div for text 1-->
+      <div style="display: flex; color: white">
+        <span id="element" class="typed-cursor"></span>
 
-
-        <!--Include Photos
-        <div style="display: flex;
-        justify-content: center;
-        align-items: center;
-       
-        font-size: 43px;
-        color: white;">
-            <img src="duta.jpeg" width="250" height="300">
-        </div>
-        -->
-
-        <!--div for text 1-->
-        <div style="display: flex;color: white;">
-
-            <span id="element" class="typed-cursor"></span>
-
-            <p id="hasil" style="white-space: pre-line;">
-                
-            </p>
-        </div>
+        <p id="hasil" style="white-space: pre-line"></p>
+      </div>
     </div>
 
-    <!--<script src="../src/word.js"></script>-->
-
-
-
-</body>
-
+  </body>
 </html>
