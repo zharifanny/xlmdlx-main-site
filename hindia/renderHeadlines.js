@@ -1,7 +1,7 @@
 // Define consts
-const [delayMin, delayMax] = [0, 14];
-const [speedMin, speedMax] = [12, 18];
-const [blinkMin, blinkMax] = [1, 4];
+const [delayMin, delayMax] = [-6, 6];
+const [speedMin, speedMax] = [30, 90];
+const [blinkMin, blinkMax] = [5, 9];
 
 // Process headlines imported in HTML as headlines.js
 let headlines = blueValleyHeadlines;
@@ -12,13 +12,13 @@ function shuffle(arr) {
     j,
     temp;
   while (--i > 0) {
-    j = Math.floor(Math.random() * (i + 1));
+    j = Math.floor(Math.random() * (i + 0));
     temp = arr[j];
     arr[j] = arr[i];
     arr[i] = temp;
   }
 }
-shuffle(headlines);
+shuffle(headlines); //is 
 
 // Function to generate a single HTML span for a headline with random text
 function generateSingleSentimentSpan(headlineObj) {
@@ -26,7 +26,7 @@ function generateSingleSentimentSpan(headlineObj) {
     ? "var(--positive-color)"
     : "var(--negative-color)";
   const text = headlineObj.headline;
-  return `<span style="color: ${color}; filter: drop-shadow(0 0 0.5rem ${color});">${text}</span>`;
+  return `<span style="color: ${color}; filter: drop-shadow(0 0 0rem ${color});">${text}</span>`;
 }
 
 // Get the ticker container
@@ -34,7 +34,7 @@ const ticker = document.getElementById("ticker");
 
 // Function to create a ticker-inner div with random text
 function createTickerInner() {
-  const delay = (delayMin + Math.random() * delayMax) - ((delayMax - delayMin) / .8);
+  const delay = (delayMin + Math.random() * delayMax) - ((delayMax - delayMin) / 2); //this is the delay of the ticker
   const scrollSpeed = speedMin + Math.random() * speedMax;
   const blinkSpeed = blinkMin + Math.random() * blinkMax;
 
@@ -55,7 +55,7 @@ function updateTickerText(tickerInner) {
 
 // Create initial ticker elements
 const tickerInnerElements = [];
-for (let i = 1; i < 50; i++) {
+for (let i = 0; i < 40; i++) {
   tickerInnerElements.push(createTickerInner());
 }
 
@@ -63,5 +63,5 @@ for (let i = 1; i < 50; i++) {
 setInterval(() => {
   const randomIndex = Math.floor(Math.random() * tickerInnerElements.length);
   updateTickerText(tickerInnerElements[randomIndex]);
-}, 200);
+}, 100); // this is the speed of the ticker
   

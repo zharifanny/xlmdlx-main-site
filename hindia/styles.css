@@ -6,12 +6,12 @@
   --positive-color: #717171;
   /* --positive-color: #00ff00; */
   --negative-color: #ffffff;
-  --size: 32px;
+  --size: 2rem;
 }
 
 body,
 html {
-  margin: 0;
+  margin: 1;
   padding: 0;
   background-color: black;
   /* font-family: "Archivo", sans-serif; */
@@ -25,13 +25,13 @@ html {
   width: 100%;
   height: auto;
   white-space: nowrap;
-  overflow: hidden; 
-  position:relative; 
+  overflow: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--size/2);
   font-size: var(--size);
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   transition: all 1s ease-in-out;
   /* background-color: #44991032; */
 }
@@ -40,7 +40,7 @@ html {
   display: inline-block;
   white-space: nowrap;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   transform: translateX(100%);
   /* border: 1px solid orangered; */
 }
@@ -74,6 +74,6 @@ html {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(10%); /* 10% is arbitrary */
+    transform: translateX(-100%);
   }
 }
