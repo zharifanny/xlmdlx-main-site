@@ -1,56 +1,25 @@
 <html>
-  <head>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script>
-      AFRAME.registerComponent("modify-materials", {
-        init: function () {
-          // Wait for model to load.
-          this.el.addEventListener("model-loaded", () => {
-            // Grab the mesh / scene.
-            const obj = this.el.getObject3D("mesh");
-            // Go over the submeshes and modify materials we want.
-            obj.traverse((node) => {
-              if (node.name.indexOf("ship") !== -1) {
-                node.material.color.set("red");
-              }
-            });
-          });
-        },
-      });
-    </script>
+<head>
+  <title>My A-Frame Scene</title>
+  <script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+  <script src="aframe-stereo-component.js.min.js"></script>
+</head>
+<body>
+  <a-scene>
+      <a-sky color="#FFF"></a-sky>
+      <a-light color="#333" position="0 5 0" type="ambient" intensity="0.2"></a-light>
+      <a-light type="point" color="#EEE" intensity="1.0" position="3 3 10"></a-light>
 
-    <script src="stereo.js"></script>
-  </head>
-  <body>
-    <a-scene background="color: white" >
-      <a-assets>
-        <img id="left" src="1.jpeg" />
-        <img id="right" src="2.jpg" />
-      </a-assets>
+      <!-- 'left' eye entities will pass trough the camera in non-VR mode -->
 
-      <!--Cursor On Camera-->
-      <a-camera stereocam="eye: right">
-        <a-cursor></a-cursor>
-        <!-- Or <a-entity cursor></a-entity> -->
-      </a-camera>
+      <a-camera position="0 0 10" cursor-color="black" stereocam="eye:left;"></a-camera>
 
-      <!--Stereoskopik-->
-      <a-sky src="#left" rotation="0 -90 0" stereo="eye: left"></a-sky>
-      <a-sky src="#right" rotation="0 -90 0" stereo="eye: right"></a-sky>
+      <!-- in VR mode, the first box is displayed only in the left eye, the second one in the right eye -->
 
-      <!--3D Asset-->
-      <!-- <a-assets>
-        <a-asset-item
-          id="cityModel"
-          src="../../preview/assets/Scene.glb"
-        ></a-asset-item>
-      </a-assets> -->
+      <a-entity geometry="primitive: box" material="color: #C03546" stereo="eye:left"></a-entity>
+      <a-entity geometry="primitive: box" material="color: #3546C0" position="0 5 0" stereo="eye: right"></a-entity>
 
-      <!-- <a-entity gltf-model="#cityModel" modify-materials></a-entity> -->
+  </a-scene>
 
-      
-    </a-scene>
-
-
-  </body>
-</html>
+ </body>
+ </html>
