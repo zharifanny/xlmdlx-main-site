@@ -1,14 +1,47 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@4.0.2/dist/aframe-physics-system.min.js"></script>
+    <script src="kibor.js"></script>
   </head>
   <body>
-    <a-scene physics>
-      <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-      <a-ocean color="aqua" depth="100" width="100"></a-ocean>
+    <a-assets>
+      <a-asset-item
+        id="cityModel"
+        src="../../preview/assets/Scene.glb"
+      ></a-asset-item>
+    </a-assets>
+
+    <a-scene background="color: black" inpector->
+      <a-assets>
+        <a-asset-item
+          id="cityModel"
+          src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"
+        ></a-asset-item>
+      </a-assets>
+      <a-entity gltf-model="#cityModel" modify-materials></a-entity>
+      <!-- <a-entity
+      
+        camera
+        look-controls
+        wasd-controls="acceleration:25"
+        position="0 1.6 0"
+        look-controls="pointerLockEnabled: true"
+        pointerLockEnabled="true"
+      >
+        <a-cursor></a-cursor>
+      </a-entity> -->
+
+      <a-entity id="rig" movement-controls kinematic-body>
+        <a-entity camera
+                  position="0 1.6 0"
+                  wasd-controls="acceleration:22"
+                  look-controls="pointerLockEnabled: true"></a-entity>
+                  <a-cursor></a-cursor>
+      </a-entity>
+
+
+
     </a-scene>
   </body>
 </html>
