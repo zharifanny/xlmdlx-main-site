@@ -1,5 +1,5 @@
 // Define consts
-const [delayMin, delayMax] = [-6, 6];
+const [delayMin, delayMax] = [-3, 6];
 const [speedMin, speedMax] = [30, 90];
 const [blinkMin, blinkMax] = [5, 9];
 
@@ -12,7 +12,7 @@ function shuffle(arr) {
     j,
     temp;
   while (--i > 0) {
-    j = Math.floor(Math.random() * (i + 0));
+    j = Math.floor(Math.random() * (i + 1));
     temp = arr[j];
     arr[j] = arr[i];
     arr[i] = temp;

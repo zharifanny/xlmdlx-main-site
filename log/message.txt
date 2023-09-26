@@ -14,3 +14,6 @@ its 4 am, was streaming latest apple event lately, too bad no ios 17/macos 14* r
 
 sept 25, 2023
 change this page from direct html writing for the message to reading from txt, still fucked up my sleep
+
+sept 26, 2023
+i modified my word page to work with izzy's "hindia-news"
