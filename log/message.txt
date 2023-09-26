@@ -9,11 +9,14 @@ heavily inspired from vngnc/izzy, frkn awesome
 
 gitu dulu lah ya, semoga bermanfaat, oh iya kalo mau kontak, send email ae, tp icloud custom mail lom bisa, nanti nanti aja lah ya, lewat lain dulu
                 
-sept 13, 2023
+sept 13
 its 4 am, was streaming latest apple event lately, too bad no ios 17/macos 14* release date, also no latest iphone se news, 2025 prolly, also new playlist btw
 
-sept 25, 2023
+sept 25
 change this page from direct html writing for the message to reading from txt, still fucked up my sleep
 
-sept 26, 2023
+sept 26
 i modified my word page to work with izzy's "hindia-news"
+
+sept 27
+change month-dd format instead of month-dd-yyyy
