@@ -19,4 +19,4 @@ sept 26
 i modified my word page to work with izzy's "hindia-news"
 
 sept 27
-change month-dd format instead of month-dd-yyyy
+change month-dd format instead of month-dd-yyyy, 
