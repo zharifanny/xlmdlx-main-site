@@ -20,3 +20,6 @@ i modified my word page to work with izzy's "hindia-news"
 
 sept 27
 change month-dd format instead of month-dd-yyyy, 
+
+oct 1
+added vercel for alternative at xlmdlx.vercel.app ,i also lost my bike key rip $40
