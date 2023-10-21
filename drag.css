@@ -13,6 +13,12 @@
   touch-action: none;
 }
 
+.random-gambar {
+  position: absolute;
+  top: calc(var(--random-top) * 100%);
+  left: calc(var(--random-left) * 100%);
+}
+
 .zoomed {
   transform: scale(2); /* You can adjust the scale factor as needed */
   transition: transform 0.3s ease; /* Add a smooth transition for zooming */
@@ -222,7 +228,7 @@
   background-color: #000000;
   font-size: small;
   font-style: italic;
-  color: #white;
+  color: white;
   font-family: "Helvetica", "Rubik", "Segoe UI", sans-serif;
 }
 
@@ -367,3 +373,15 @@ a:hover {
   bottom: 0px;
 
 */
+.random-gambar {
+  position: absolute;
+  top: calc(var(--random-top) * 100%);
+  left: calc(var(--random-left) * 100%);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

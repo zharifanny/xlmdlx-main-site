@@ -4,15 +4,17 @@ interact('.draggable')
     // enable inertial throwing
     inertia: {
         resistance: 15,  // The higher the resistance, the slower the deceleration good
-        minSpeed: 80,  // The minimum speed the element keeps after inertia, good is 
-        endSpeed: 20, // The speed at which the element comes to a stop after inertia
+        minSpeed: 0.1,  // The minimum speed the element keeps after inertia, good is 
+        endSpeed: 0.1, // The speed at which the element comes to a stop after inertia
       },
     // keep the element within the area of it's parent
     modifiers: [
       interact.modifiers.restrictRect({
         restriction: 'parent',
         endOnly: true, // good
-        elementRect: { top: -0.25, left: 0, bottom: -2, right: 1 },
+        //randomize bende
+        
+        elementRect: { top: -0.25, left: 0, bottom: -2, right: 0.5 },
 
       })
     ],
