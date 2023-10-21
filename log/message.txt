@@ -29,4 +29,4 @@ oct 17
 download site surprisingly helped me to print kertas laprak sama download modul pas lagi prak instead of download modul di reglab, access it on xlmdlx.xyz/download, it should be have some custom download and delete button tapi gada uang hosting skarang,  next ae lah ya 
 
 oct 22
-modified main showcase for artwork, make it randomized, added my playlist link just in case, small changelog to improve qol like added new download page biar tinggal scan dari folder
+modified main showcase for artwork, make it randomized, added my playlist link just in case, small changelog to improve qol including added new download page biar tinggal scan dari folder
