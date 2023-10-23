@@ -14,7 +14,7 @@
           "img/w scan.jpeg",
           "img/e.gif",
           "img/26.png",
-          "img/times.png",
+          "img/times.jpg",
           "img/eyeof.jpg",
           "img/bonfire.png",
           "img/toshiki.jpg",
