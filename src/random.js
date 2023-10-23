@@ -15,7 +15,7 @@
           "img/e.gif",
           "img/26.png",
           "img/times.png",
-          "img/eyeof.jps",
+          "img/eyeof.jpg",
           "img/bonfire.png",
           "img/toshiki.jpg",
           "img/kukri.png",
