@@ -6,7 +6,6 @@
           "img/mindhealing.webp",
           "img/pale_blue.jpg",
           "img/weak.jpg",
-          
           "img/v.jpg",
           "img/ical99.jpg",
           "img/ayaka2022.webp",
@@ -15,6 +14,11 @@
           "img/w scan.jpeg",
           "img/e.gif",
           "img/26.png",
+          "img/times.png",
+          "img/eyeof.jps",
+          "img/bonfire.png",
+          "img/toshiki.jpg",
+          "img/kukri.png",
 
         ];
 
