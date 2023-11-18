@@ -1,0 +1,38 @@
+sept 12, 2023
+opening for log test, i might wrote stuff here, test test test did i messed up the line? looks fine ok, i rarely text on social media  (exc twitter) , i might write my thoughts here while experimenting with my writing skills, grammar stuff mostly, idk, campur"/salah" gapapa lah ya indo english, fuck lah sama gatekeeper, oh yeah for those who curious my setup, it's msi laptop with 1050 gpu, m2 macbook air, iphone xs, moondrop starfield, logiteh g90, xbox wireless controller, was thinking to experimenting with egpu using windows setup.
+                
+ran this site hosted by netlify, autodeploy using github, it's free.
+                
+i was inspired by how from software game deliver it story-telling by adding clue at every part of the game like item description, dialogue, etc, kek, mereka ngasih story-telling yang ngga explicit, kita yang harus figure it out sendiri gimana ceritanya
+                
+heavily inspired from vngnc/izzy, frkn awesome
+
+gitu dulu lah ya, semoga bermanfaat, oh iya kalo mau kontak, send email ae, tp icloud custom mail lom bisa, nanti nanti aja lah ya, lewat lain dulu
+                
+sept 13
+its 4 am, was streaming latest apple event lately, too bad no ios 17/macos 14* release date, also no latest iphone se news, 2025 prolly, also new playlist btw
+
+sept 25
+change this page from direct html writing for the message to reading from txt, still fucked up my sleep
+
+sept 26
+i modified my word page to work with izzy's "hindia-news"
+
+sept 27
+change month-dd format instead of month-dd-yyyy, 
+
+oct 1
+added vercel for alternative at xlmdlx.vercel.app ,i also lost my bike key rip $40
+government dungu, 
+
+oct 17
+download site surprisingly helped me to print kertas laprak sama download modul pas lagi prak instead of download modul di reglab, access it on xlmdlx.xyz/download, it should be have some custom download and delete button tapi gada uang hosting skarang,  next ae lah ya 
+
+oct 22
+modified main showcase for artwork, make it randomized, added my playlist link just in case, small changelog to improve qol including added new download page biar tinggal scan dari folder
+
+oct 23
+bunch of assholes
+
+oct 28
+fucked my mac again, fixed more bug on site, also doing small cg project
