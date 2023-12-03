@@ -4,10 +4,8 @@
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>
-
   <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
   <script src="https://unpkg.com/aframe-gradient-sky@1.5.0/dist/gradientsky.min.js"></script>
-
   <script src="kibor.js"></script>
 </head>
 
@@ -17,60 +15,48 @@
   </a-assets>
 
   <a-scene 
+    obb-collider="showColliders: true"
+    stats 
+    renderer="antialias: true; colorManagement: true; sortObjects: true; physicallyCorrectLights: true; maxCanvasWidth: 1920; maxCanvasHeight: 1920;" 
+    xr-mode-ui="enabled: false" 
+    webxr="requiredFeatures: hit-test,local-floor; optionalFeatures: dom-overlay,unbounded; overlayElement: #overlay;" 
+    reflection="directionalLight:a-light#dirlight;"
+    loading-screen="dotsColor: red; backgroundColor: black" 
+    background="color: black"
+    inspector="true" > <!-- Fixed the inspector attribute -->
 
-  stats
-
-  renderer="antialias: true;
-  colorManagement: true;
-  sortObjects: true;
-  physicallyCorrectLights: true;
-  maxCanvasWidth: 1920;
-  maxCanvasHeight: 1920;" 
-
-  xr-mode-ui="enabled: false"
-
-  webxr="requiredFeatures: hit-test,local-floor;
-                optionalFeatures: dom-overlay,unbounded;
-                overlayElement: #overlay;"
-  
-  reflection="directionalLight:a-light#dirlight;" loading-screen="dotsColor: red; backgroundColor: black" background="color: black" inpector->
-
-  <a-entity gltf-model="src: ../../preview/assets/VRScene.glb"
-  body="type: dynamic; mass: 5; shape: none;"
-  shape__main="shape: cylinder;
-               height: 0.36;
-               radiusTop: 0.24;
-               radiusBottom: 0.24;"
-  shape__handle="shape: box;
-                 halfExtents: 0.15 0.18 0.04;
-                 offset: 0.4 0 0;">
-  </a-entity>
-
-    <a-entity gltf-model="#cityModel" modify-materials></a-entity>
-
-    <!-- <a-entity
-      
-        camera
-        look-controls
-        wasd-controls="acceleration:25"
-        position="0 1.6 0"
-        look-controls="pointerLockEnabled: true"
-        pointerLockEnabled="true"
-      >
-        <a-cursor></a-cursor>
-      </a-entity> -->
-
-    <a-entity id="rig" movement-controls kinematic-body>
-      <a-entity camera position="0 1.6 0" wasd-controls="acceleration:100" look-controls="pointerLockEnabled: true">
-      </a-entity>
-      <a-cursor></a-cursor>
+    <a-entity 
+    gltf-model="src: ../../preview/assets/VRScene.glb" 
+              body="type: dynamic; mass: 5; shape: none;"
+              shape__main=" shape: cylinder; height: 0.36; radiusTop: 0.24; radiusBottom: 0.24;" 
+              shape__handle="shape: box; halfExtents: 0.15 0.18 0.04; offset: 0.4 0 0;">
     </a-entity>
 
 
+    <!-- <a-entity ></a-entity> -->
+
+
+a
+    <a-entity 
+    
+    id="collider"
+    obb-collider="showColliders: true" 
+    gltf-model="#cityModel"
+    trackedObject3D="type: face; offset: 0 0 0; controller: 0"
+    >
+  
+  
+  </a-entity>
+
+
+
+    <!-- <a-entity id="rig" movement-controls kinematic-body> 
+      <a-entity camera position="0 1.6 0" wasd-controls="acceleration:100" look-controls="pointerLockEnabled: true">
+      </a-entity>
+      <a-cursor></a-cursor>
+    </a-entity> -->
+
   </a-scene>
-
-
-
 </body>
 
 </html>
