@@ -7,13 +7,11 @@
   <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
   <script src="https://unpkg.com/aframe-gradient-sky@1.5.0/dist/gradientsky.min.js"></script>
   <script src="kibor.js"></script>
-  <script src="button.js"></script>
-
 </head>
 
 <body>
   <a-assets>
-    <a-asset-item id="cityModel" src="../../preview/assets/Room24.glb"></a-asset-item>
+    <a-asset-item id="cityModel" src="../../preview/assets/VRScene.glb"></a-asset-item>
   </a-assets>
 
   <a-scene 
@@ -28,7 +26,7 @@
     inspector="true" > <!-- Fixed the inspector attribute -->
 
     <a-entity 
-    gltf-model="src: ../../preview/assets/Room24.glb" 
+    gltf-model="src: ../../preview/assets/VRScene.glb" 
               body="type: dynamic; mass: 5; shape: none;"
               shape__main=" shape: cylinder; height: 0.36; radiusTop: 0.24; radiusBottom: 0.24;" 
               shape__handle="shape: box; halfExtents: 0.15 0.18 0.04; offset: 0.4 0 0;">

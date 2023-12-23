@@ -1,4 +1,3 @@
 canvas.addEventListener("click", async () => {
-    await canvas.requestPointerLock();
-  });
-
+  await canvas.requestPointerLock();
+});
