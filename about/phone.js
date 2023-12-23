@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
     // Load version based on device width
-    if (width <= 600) {
+    if (width <= 1024) {
       loadVersion('v2.html');
     } else {
       loadVersion('v1.html');
