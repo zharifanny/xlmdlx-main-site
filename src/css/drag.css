@@ -390,3 +390,39 @@ html, body {
 {
   overflow: hidden;
 }
+
+.tap-target {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 16em;
+  height: 16em;
+  padding: 1em;
+  margin: 1rem auto;
+  box-sizing: border-box;
+
+  border-radius: 100%;
+
+  font-size: 1.125em;
+  text-align: center;
+  color: #fff;
+  background-color: #29e;
+
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+
+  transition: all 0.3s;
+}
+
+.tap-target.switch-bg {
+  background-color: #f40;
+}
+
+.tap-target.large {
+  transform: scale(1.25);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
