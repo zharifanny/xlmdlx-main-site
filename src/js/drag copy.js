@@ -3,10 +3,9 @@ interact('.draggable')
   .draggable({
     // enable inertial throwing
     inertia: {
-        resistance: 30,  // The higher the resistance, the slower the deceleration good
+        resistance: 15,  // The higher the resistance, the slower the deceleration good
         minSpeed: 0.1,  // The minimum speed the element keeps after inertia, good is 
         endSpeed: 0.1, // The speed at which the element comes to a stop after inertia
-        
       },
     // keep the element within the area of it's parent
     modifiers: [

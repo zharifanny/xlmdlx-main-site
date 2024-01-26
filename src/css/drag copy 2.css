@@ -4,7 +4,7 @@
   width: 25%;
   border-radius: 0.75em;
   padding: 0%;
-  /* transition: all 0.3s; */
+  transition: all 0.3s;
 
 
   -webkit-touch-callout: none;
@@ -21,11 +21,6 @@
   -o-transition: width 0.5s;
   transition: width 0.5s;
 }
-
-/* .ngetap {
-  transition: all 0.3s;
-
-} */
 
 .random-gambar {
   position: absolute;
@@ -57,11 +52,17 @@
   transform: scale(1.25);
   
   /* using transition */
-  /* transition: all 0.3s; */
+  transition: all 0.3s;
 
 }
 
+.draggable.small img {
+  /* transform: scale(1); */
+  
+  /* using transition */
+  transition: all 0.3s;
 
+}
 
 .draggable video {
   /*buat resize vid (keknya) */
@@ -95,14 +96,10 @@
   font-size: x-small;
   color: #c3c3c3;
   margin: left;
-  transition: all 0.3s;
-
-  
 }
 
 .draggable.switch-bg div {
   display: block;
-  
 }
 
 #dragging {

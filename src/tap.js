@@ -12,6 +12,7 @@ interact('.tap-target')
     event.currentTarget.classList.toggle('rotate')
     event.currentTarget.classList.remove('large')
   })
+  
 interact('.tap-target')
   .on('tap', function (event) {
     event.currentTarget.classList.toggle('switch-bg')
