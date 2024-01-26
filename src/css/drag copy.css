@@ -4,7 +4,6 @@
   width: 25%;
   border-radius: 0.75em;
   padding: 0%;
-
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -12,11 +11,6 @@
   -ms-user-select: none;
   user-select: none;
   touch-action: none;
-
-  -webkit-transition: width 0.5s;
-  -moz-transition: width 0.5s;
-  -o-transition: width 0.5s;
-  transition: width 0.5s;
 }
 
 .random-gambar {
@@ -30,9 +24,9 @@
   transition: transform 0.3s ease; /* Add a smooth transition for zooming */
 }
 
-/* .draggable.switch-bg {
-  transform: scale(1.25);
-} */
+.draggable.switch-bg {
+  background-size: 100%;
+}
 
 .draggable img {
   /*buat resize img (keknya) */
@@ -44,9 +38,8 @@
   transition: width 0.5s;
 }
 
-.draggable.large img {
-  transform: scale(1.25);
-
+.draggable.switch-bg img {
+  width: 200%;
   -webkit-transition: width 0.5s;
   -moz-transition: width 0.5s;
   -o-transition: width 0.5s;
@@ -64,9 +57,9 @@
   transition: width 0.5s;
 }
 
-.draggable.large video {
+.draggable.switch-bg video {
   /*zoom in or outz vid*/
-  transform: scale(1.1);
+  width: 150%;
   -webkit-transition: width 0.5s;
   -moz-transition: width 0.5s;
   -o-transition: width 0.5s;
@@ -371,7 +364,16 @@ a:hover {
   left: 55px;
 }
 
+/*
+  text-align: center;
+  margin: auto;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  left: 0px;
+  bottom: 0px;
 
+*/
 .random-gambar {
   position: absolute;
   top: calc(var(--random-top) * 100%);
@@ -389,7 +391,7 @@ html, body {
 {
   overflow: hidden;
 }
-/* 
+
 .tap-target {
   display: flex;
   flex-direction: column;
@@ -412,11 +414,11 @@ html, body {
   user-select: none;
 
   transition: all 0.3s;
-} */
+}
 
-/* .tap-target.switch-bg {
+.tap-target.switch-bg {
   background-color: #f40;
-} */
+}
 
 .tap-target.large {
   transform: scale(1.25);

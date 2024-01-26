@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Display</title>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+    <style>
+        .tap-target {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 16em;
+            height: 16em;
+            padding: 1em;
+            margin: 1rem auto;
+            box-sizing: border-box;
+            border-radius: 50%;
+            font-size: 1.125em;
+            text-align: center;
+            color: #fff;
+            background-color: #29e;
+            cursor: pointer;
+            touch-action: none;
+            user-select: none;
+            transition: all 0.3s;
+        }
+
+        .tap-target.switch-bg {
+            background-color: #f40;
+        }
+
+        .tap-target.large {
+            transform: scale(12.25);
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="footer">
+        <div class="tap-target">
+            <p>Tap to change color</p>
+            <p>Doubletap to change size</p>
+            <p>Hold to rotate</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.interactjs.io/v1.10.26/interactjs/index.js"></script>
+    <script>
+        interact('.tap-target')
+            .on('tap', function (event) {
+                event.currentTarget.classList.toggle('switch-bg');
+                event.preventDefault();
+            })
+            .on('doubletap', function (event) {
+                console.log('Double-tap event triggered');
+                event.currentTarget.classList.toggle('large');
+                event.currentTarget.classList.remove('rotate');
+                event.preventDefault();
+            })
+            .on('hold', function (event) {
+                event.currentTarget.classList.toggle('rotate');
+                event.currentTarget.classList.remove('large');
+            });
+
+        interact('.item').draggable({
+            listeners: {
+                move(event) {
+                    console.log(event.pageX, event.pageY);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

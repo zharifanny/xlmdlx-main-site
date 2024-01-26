@@ -2,6 +2,7 @@
       function randomizeImageSrc() {
         const images = document.querySelectorAll(".draggable img");
 
+        //randomize image
         const possibleSources = [
           "img/mindhealing.webp",
           "img/pale_blue.jpg",

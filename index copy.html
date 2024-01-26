@@ -5,23 +5,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>14th Season</title>
-  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-
   <link rel="icon" type="image/x-icon" href="main.ico" />
   <!--gaada ico, malas bikin ikon-->
   <link href="src/css/drag.css" rel="stylesheet" />
-  <!-- <link href="src/css/tap.css" rel="stylesheet" /> -->
-
   <!-- css for draggable -->
   <script src="src/req.js"></script>
-  <!-- <script src="src/tap.js"></script> -->
+  <script src="src/tap.js"></script>
+
   <script src="src/random.js"></script>
 
 
   <!-- <script src="src/js/heightman.js"></script> -->
 
   <script src="src/randomized-vid.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
   <!-- <script src="random.js"></script> -->
   <!--use interact.js-->
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -48,7 +45,7 @@
       </video>
     </div>
 
-    <div id="mh" class="draggable tap-target">
+    <div id="mh" class="draggable">
       <img src="img/mindhealing.webp" />
     </div>
 
@@ -102,38 +99,9 @@
 
   <div style="z-index: 999" id="footer">
     <br />
-    <a href="about/" style="font-family: 'Times New Roman', Times, serif; font-size: 14px" class="footermain">© 2024
-      forssellfritz/khindy zharifany, attribution</a>
+    <a href="about/" style="font-family: 'Times New Roman', Times, serif; font-size: 14px" class="footermain">© 2024 forssellfritz/khindy zharifany, attribution</a>
     <br /><br />
   </div>
-
-  <script>
-    interact('.draggable')
-      .on('tap', function (event) {
-        console.log('Single-tap event triggered');
-
-        event.currentTarget.classList.toggle('switch-bg');
-        event.preventDefault();
-      })
-      .on('doubletap', function (event) {
-        console.log('Double-tap event triggered');
-        event.currentTarget.classList.toggle('large');
-        event.currentTarget.classList.remove('rotate');
-        event.preventDefault();
-      })
-      .on('hold', function (event) {
-        event.currentTarget.classList.toggle('rotate');
-        event.currentTarget.classList.remove('large');
-      });
-
-    interact('.item').draggable({
-      listeners: {
-        move(event) {
-          console.log(event.pageX, event.pageY);
-        }
-      }
-    });
-  </script>
 </body>
 
 </html>
