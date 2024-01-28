@@ -13,7 +13,7 @@ loader.load('assets/Scene.glb', function (gltf) // load a glTF resource
     root.scale.set(0.3, 0.3, 0.3);
     root.name = 'ayaka6';
     scene.add(root);
-}, function (xhr) {
+}, function (xhr)   {
     console.log((xhr.loaded / xhr.total * 100) + '% loaded');
 }, function (error) {
     console.log('An error occurred');

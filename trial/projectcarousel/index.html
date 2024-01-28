@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>3D Carousel</title>
+    <script type="importmap">
+        {
+            "imports": 
+            {
+            "three": "https://unpkg.com/three@0.150.0/build/three.module.js",
+            "OrbitControls": "https://unpkg.com/three@0.150.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+        </script>
+        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+</head>
+<body>
+    
+    <script type="module" src="index.js"></script>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item">
+                <canvas class="webgl"></canvas>
+                <!-- <h1>TESTING</h1> -->
+
+            </div>
+            <div class="carousel-item">
+                <h1>TESTING2</h1>
+
+                <!-- Content for the second menu -->
+            </div>
+            <div class="carousel-item">
+                <h1>TESTING3</h1>
+
+                <!-- Content for the third menu -->
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+        
+        <button class="prev-btn" onclick="changeSlide(-1)">Previous</button>
+        <button class="next-btn" onclick="changeSlide(1)">Next</button>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
