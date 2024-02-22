@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <title>untuknya</title>
+    <style>
+        audio {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+          /* Style for the audio player controls in WebKit browsers */
+          audio::-webkit-media-controls-panel {
+            background-color: #555555; /* Change the background color */
+            color: rgb(250, 250, 250); /* Change the color of the controls */
+        }
+
+        audio::-webkit-media-controls-play-button {
+            color: rgb(255, 255, 255); /* Change the color of the play button */
+        }
+
+        audio::-webkit-media-controls-timeline {
+            color: white; /* Change the color of the timeline */
+        }
+
+        /* Apply the custom font to the body */
+        body {
+            font-family: 'CustomFont', 'Times New Roman', Times, serif, sans-serif; /* Use the custom font as the first choice */
+            background-color: rgb(0, 0, 0);
+            color: white; /* Adjust text color as needed */
+        }
+        footer {
+            background-color: #000000;
+            color: rgb(0, 151, 252);
+            padding: 1px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <audio controls autoplay>
+        <source src="piano.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="fadein">
+        <div style="display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 43px;">
+            <img src="51aa3a34-0386-4023-beea-d90485fdbe1e.jpg" width="330" height="550">
+        </div>
+
+        <div style="display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 43px;">
+            <span id="element" class="typed-cursor"></span>
+            <p style="font-size: 17px; text-align: center; white-space: pre-line; font-style: italic;">
+                semua keluh kesah dan sedihnya hati aku akan aku tuliskan di dalam
+                situs ini sebagaimana aku telah jatuh cinta kepadamu walaupun kita
+                belum ketemu
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>©2024 deefax/faqih abin</p>
+    </footer>
+    
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.muted = false;
+            audio.play();
+        }
+    </script>
+    
+</body>
+</html>

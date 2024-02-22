@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Random YouTube Video</title>
+</head>
+
+<body style="background-color: black;">
+    <div style="text-align: center; padding: 150px 0;">
+        <iframe id="randomYoutubeVideo" width="560" height="315" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <script>
+            // Array of YouTube video IDs
+            var videoIds = [
+                "Y8vCIGf8EgQ",
+                "KFETh_4GbcM",
+                "",
+                // Add more video IDs as needed
+            ];
+
+            // Function to get a random video ID
+            function getRandomVideoId() {
+                var randomIndex = Math.floor(Math.random() * videoIds.length);
+                return videoIds[randomIndex];
+            }
+
+            // Function to set a new random video ID to the iframe source
+            function setRandomVideo() {
+                var randomVideoId = getRandomVideoId();
+                var iframe = document.getElementById("randomYoutubeVideo");
+                iframe.src = "https://www.youtube.com/embed/" + randomVideoId + "?&autoplay=1";
+            }
+
+            // Call the setRandomVideo function on page load
+            window.onload = setRandomVideo;
+        </script>
+    </div>
+</body>
+
+</html>
