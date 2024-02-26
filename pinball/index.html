@@ -7,11 +7,11 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <body style="background-color: black;">
+  <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
-        <!-- <div id="unity-logo"></div> -->
+        <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title" style="color: wheat;">matrikulasi-game-programming</div>
+        <div id="unity-build-title">matrikulasi-game-programming</div>
       </div>
     </div>
     <script>
@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/pinballbeneran.loader.js";
+      var loaderUrl = buildUrl + "/pinballskiddo.loader.js";
       var config = {
-        dataUrl: buildUrl + "/pinballbeneran.data.unityweb",
-        frameworkUrl: buildUrl + "/pinballbeneran.framework.js.unityweb",
-        codeUrl: buildUrl + "/pinballbeneran.wasm.unityweb",
+        dataUrl: buildUrl + "/pinballskiddo.data.unityweb",
+        frameworkUrl: buildUrl + "/pinballskiddo.framework.js.unityweb",
+        codeUrl: buildUrl + "/pinballskiddo.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "matrikulasi-game-programming",
