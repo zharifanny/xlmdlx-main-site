@@ -14,3 +14,10 @@ jobs:
         server: ftp.petanicabe.xyz
         username: ${{ secrets.usernamecpanel }}
         password: ${{ secrets.passwordcpanel }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/trial/**
+          **/zarsip/**
+          **/gamebak/**
+          fileToExclude.txt
