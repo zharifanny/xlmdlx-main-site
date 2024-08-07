@@ -12,5 +12,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.petanicabe.xyz
-        username: zharifanny
+        username: ${{ secrets.usernamecpanel }}
         password: ${{ secrets.passwordcpanel }}
