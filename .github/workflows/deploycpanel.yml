@@ -13,4 +13,4 @@ jobs:
       with:
         server: ftp.petanicabe.xyz
         username: zharifanny
-        password: ${{ secrets.ftp_password }}
+        password: ${{ secrets.ftp_passwordcpanel }}
