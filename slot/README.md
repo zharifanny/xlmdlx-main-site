@@ -1,36 +1,28 @@
-# HTML5 Slot Machine
+# Slot machine game
+A simple slot machine game with three reels.
 
-![Build and Deploy Status](https://github.com/johakr/html5-slot-machine/actions/workflows/deploy.yml/badge.svg) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![Slots](https://user-images.githubusercontent.com/61456651/205433186-9b1e4d90-98b5-4afb-86d0-8fe9bd86c7d3.jpg)
 
-This is a modern proof of concept casino slot machine game, built using only vanilla HTML, CSS and JavaScript.
-No Flash or Frameworks required. Allowing for an amazing low bundle size and blazing fast performance.
+### [Live Demo](https://asiryk.github.io/slot-game/ "Slot game")
 
-Built using the _Web Animations API_.
+---
 
-**[Live Demo](https://johakr.github.io/html5-slot-machine/)**
+#### What you need to run this code
+1. Node (20.x)
+2. npm (10.x)
 
-## Features
+#### How to run this code
+1. Clone this repository
+2. Open command line in the cloned folder,
+   - To install dependencies, run ```npm install```
+   - To run the application for development, run ```npm run serve```
+3. Open [localhost:4200](http://localhost:4200/) in the browser
 
-- Fully responsive for great UX on mobile, web & fullscreen mode.
-- Autoplay functionality, which keeps running even if the game window is in background.
+---
 
-## Installation, Build & Deployment
-
-1. Clone repository
-2. Run `npm install`
-   - _Development_: run `npm start` and go to `http://localhost:8080`
-   - _Production_: run `npm run build` and serve from `/dist`
-
-## Configuration
-
-For configuration options see `config` object in [index.js](https://github.com/johakr/html5-slot-machine/blob/master/src/js/index.js)
-
-| Property      | Description                                                                                                                            | Default   |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| `inverted`    | Controls visual spinning direction of reels. If false, reels will spin from bottom to top. If true, reels will spin from top to bottom | false     |
-| `onSpinStart` | Callback function invoked when spin starts with symbols pattern array `(symbols) => void`.                                             | undefined |
-| `onSpinEnd`   | Callback function invoked when spin ends with symbols pattern array `(symbols) => void`.                                               | undefined |
-
-## Credits
-
-Icons are created by [KPD Media](https://dribbble.com/shots/3517520-Star-Wars) and can be used for private and commercial purposes with no attribution required ([check license here](https://iconstore.co/icons/10-star-wars-icons/)).
+### Features
+1. Winning: (3 symbols in a middle horizontal row)
+   - 3 Same symbols
+   - 2 Same symbols and 1 Wild
+   - 2 Wilds and 1 any symbol
+   - _**Note:**_ 3 Wilds counts as a loss
