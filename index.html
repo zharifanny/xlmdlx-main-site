@@ -104,12 +104,14 @@
         event.currentTarget.classList.toggle('switch-bg');
         event.preventDefault();
       })
+
       .on('doubletap', function (event) {
         console.log('Double-tap event triggered');
         event.currentTarget.classList.toggle('large');
         event.currentTarget.classList.remove('rotate');
         event.preventDefault();
       })
+      
       .on('hold', function (event) {
         event.currentTarget.classList.toggle('rotate');
         event.currentTarget.classList.remove('large');
