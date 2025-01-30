@@ -79,7 +79,7 @@
         ?>
 
         <br>
-        <a href="upload.php">Back to Upload Page</a>
+        
     </div>
 </body>
 </html>
