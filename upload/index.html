@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Download Files</title>
+    <style>
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Upload a File</h1>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select file to upload:
+        <input type="file" name="file" accept=".txt, .pdf, .png, .jpg, .jpeg, .gif">
+        <input type="submit" value="Upload File">
+    </form>
+
+    <h2>Uploaded Files</h2>
+    <ul id="files-list"></ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON('list.php', function(data) {
+                var fileList = $('#files-list');
+                data.forEach(function(file) {
+                    fileList.append('<li><a href="download.php?file=' + file.name + '">' + file.name + '</a></li>');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
