@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Temporary File Upload</title>
-    <style>
 
+<head>
+  <style>
+    /* Set the background color to black and font color to antique white */
+    body {
+      background-color: black;
+      color: antiquewhite;
+    }
 
+    /* Center the output horizontally and vertically */
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
+    /* Style the links in gold with a designer vibe */
+    a {
+      color: #ffc107;
+      font-weight: bold;
+      text-shadow: 2px 2px #000;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+    }
 
-      .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+    /* Add hover effect to the links */
+    a:hover {
+      color: #fff;
+      text-shadow: 3px 3px #000;
+    }
+  </style>
+  <title>Temporary File Upload</title>
+  <style>
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
 
+<body body style="background-color: black; color: antiquewhite ;">
 
-    </style>
-  </head>
-  <body body style="background-color: black; color: antiquewhite ;">
-    
-    <div class="centered">
+  <div class="centered">
     <form action="upload.php" method="post" enctype="multipart/form-data">
       <label for="file">Upload :</label>
       <input type="file" name="file" id="file"><br><br>
       <input type="submit" value="Upload">
-      <a href="upload.php">Back to Upload Page</a>
-    </div>
+      <a href="list.php">View File List</a>
 
-    </form>
-    <a href="list.php">View File List</a>
-  </body>
+  </div>
+
+  </form>
+</body>
+
 </html>
