@@ -58,6 +58,11 @@
   <body>
     <div class="centered">
       <?php
+      // Set error reporting to include all types of errors, including E_STRICT (E_USER_NOTICE) which might be useful for development.
+error_reporting(E_ALL);
+
+// Enable display of errors. This is useful during development but should be disabled in production.
+ini_set('display_errors', 1);
       if ($_FILES['file']['error'] === UPLOAD_ERR_OK) {
         $temp_name = $_FILES['file']['tmp_name'];
         $original_name = $_FILES['file']['name'];
