@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lenis Split Scroll</title>
+
+  <style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+    section {
+      height: 100vh;
+    }
+
+    .wrapper {
+      position: sticky;
+      top: 0;
+      display: flex;
+      height: 100vh;
+    }
+
+    .left {
+      width: 50%;
+      padding: 40px;
+      background: #111;
+      color: white;
+    }
+
+    .right {
+      width: 50%;
+      overflow: hidden;
+    }
+
+    .horizontal {
+      display: flex;
+      height: 100vh;
+      will-change: transform;
+    }
+
+    .panel {
+      min-width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .p1 { background: #e63946; }
+    .p2 { background: #457b9d; }
+    .p3 { background: #2a9d8f; }
+    .p4 { background: #f4a261; }
+    .p5 { background: #6d597a; }
+  </style>
+</head>
+<body>
+
+<section>
+  <div class="wrapper">
+    <div class="left">
+      <h1>Cinematic Scroll</h1>
+      <p>Scroll ke bawah</p>
+    </div>
+
+    <div class="right">
+      <div class="horizontal" id="horizontal">
+        <div class="panel p1">IMAGE 1</div>
+        <div class="panel p2">IMAGE 2</div>
+        <div class="panel p3">IMAGE 3</div>
+        <div class="panel p4">IMAGE 4</div>
+        <div class="panel p5">IMAGE 5</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+<!-- <script>
+  const lenis = new Lenis({ smooth: true })
+
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
+
+  const horizontal = document.getElementById("horizontal")
+  const panels = document.querySelectorAll(".panel")
+  const panelWidth = document.querySelector(".right").offsetWidth
+
+  let index = 0
+  let locked = false
+
+window.addEventListener("wheel", (e) => {
+  e.preventDefault() // ← TARUH DI SINI
+  if (locked) return
+
+  if (e.deltaY > 0 && index < panels.length - 1) {
+    index++
+  } else if (e.deltaY < 0 && index > 0) {
+    index--
+  } else return
+
+  locked = true
+  horizontal.style.transition = "transform 0.8s ease"
+  horizontal.style.transform = `translateX(${-index * panelWidth}px)`
+
+  setTimeout(() => {
+    locked = false
+  }, 900)
+}, { passive: false }
+  )
+</script> -->
+
+<script>
+  const horizontal = document.getElementById("horizontal")
+  const panels = document.querySelectorAll(".panel")
+  const panelWidth = document.querySelector(".right").offsetWidth
+
+  let index = 0
+  let locked = false
+
+  window.addEventListener("wheel", (e) => {
+    e.preventDefault()
+    if (locked) return
+
+    if (e.deltaY > 0 && index < panels.length - 1) {
+      index++
+    } else if (e.deltaY < 0 && index > 0) {
+      index--
+    } else return
+
+    locked = true
+    horizontal.style.transition = "transform 0.8s ease"
+    horizontal.style.transform = `translateX(${-index * panelWidth}px)`
+
+    setTimeout(() => locked = false, 900)
+  }, { passive: false })
+</script>
+
+
+</body>
+</html>

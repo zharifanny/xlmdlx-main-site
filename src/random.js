@@ -10,7 +10,7 @@
           "img/v.jpg",
           "img/ical99.jpg",
           "img/ayaka2022.webp",
-          "img/parakanxfaishal.png",
+          // "img/parakanxfaishal.png",
           "img/ppt.jpeg",
           "img/w scan.jpeg",
           "img/e.gif",
