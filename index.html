@@ -1,198 +1,256 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>27th Season</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="main.ico" />
+    <link href="src/css/drag.css" rel="stylesheet" />
+    <!-- css for draggable -->
+    <script src="src/req.js"></script>
+    <!--Anti RMB-->
+    <script src="src/random.js"></script>
+    <script src="src/randomized-vid.js"></script>
+    <script src="src/js/drag.js"></script>
+    <!-- js for draggable -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+    <!-- bring to forward using jquery -->
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>27th Season</title>
-  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-  <link rel="icon" type="image/x-icon" href="main.ico" />
-  <link href="src/css/drag.css" rel="stylesheet" />  <!-- css for draggable -->
-  <script src="src/req.js"></script> <!--Anti RMB-->
-  <script src="src/random.js"></script>
-  <script src="src/randomized-vid.js"></script>
-  <script src="src/js/drag.js"></script>  <!-- js for draggable -->
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="crossorigin="anonymous"></script>  <!-- bring to forward using jquery -->
-  <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script> 
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        /* overflow-y: auto;   */
+        -ms-overflow-style: none; /* IE & Edge */
+        scrollbar-width: none; /* Firefox */
+      }
 
-<style>
-html, body {
-  margin: 0;
-  height: 100%;
-  /* overflow-y: auto;   */
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
-}
+      html::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* Chrome, Safari */
+      }
 
-html::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;   /* Chrome, Safari */
-}
+      .section {
+        height: 100vh;
+        width: 100%;
+        scroll-snap-align: start; /* nempel ke awal section */
+        position: relative;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* biar draggable tetap aman */
+      }
 
+      .cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border: 4px solid rgb(107, 107, 107);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: width 0.2s, height 0.2s, border 0.2s;
+        z-index: 9999; /* <--- ini biar selalu di depan */
+        mix-blend-mode: difference; /* <--- bikin warna terbalik */
+      }
 
-.section {
-  height: 100vh;
-  width: 100%;
-  scroll-snap-align: start;      /* nempel ke awal section */
-  position: relative;
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;              /* biar draggable tetap aman */
-}
+      .cursor.active {
+        width: 50px;
+        height: 50px;
+        border-color: rgb(170, 170, 170);
+      }
+    </style>
+  </head>
 
-</style>
+  <body id="lock" body style="background-color: #000000">
+    <!-- <div class="cursor" id="cursor"></div> -->
 
-</head>
+    <section class="section">
+      <div id class="fadein">
+        <div id="kawah" class="draggable zoomable">
+          <video autoplay="true" loop="true" muted="true" playsinline>
+            <source src="img/kawah.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-<body id="lock" body style="background-color: #000000">
+        <div id="agenta" class="draggable zoomable">
+          <video autoplay="true" loop="true" muted="true" playsinline>
+            <source src="img/agenta.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-  <section class="section">
+        <div id="mh" class="draggable ngetap">
+          <img src="img/mindhealing.webp" />
+        </div>
 
-  <div id class="fadein">
+        <div id="blue" class="draggable">
+          <img src="img/pale_blue.jpg" />
+        </div>
 
-    <div id="kawah" class="draggable zoomable">
-      <video autoplay="true" loop="true" muted="true" playsinline>
-        <source src="img/kawah.mp4" type="video/mp4" />
-      </video>
-    </div>
+        <div id="weak" class="draggable">
+          <img src="img/weak.jpg" />
+        </div>
 
-    <div id="agenta" class="draggable zoomable">
-      <video autoplay="true" loop="true" muted="true" playsinline>
-        <source src="img/agenta.mp4" type="video/mp4" />
-      </video>
-    </div>
+        <div id="v" class="draggable">
+          <img src="img/v.jpg" />
+        </div>
 
-    <div id="mh" class="draggable ngetap">
-      <img src="img/mindhealing.webp" />
-    </div>
+        <div id="ical" class="draggable">
+          <img src="img/ical99.jpg" />
+        </div>
 
-    <div id="blue" class="draggable">
-      <img src="img/pale_blue.jpg" />
-    </div>
+        <div id="ayaka" class="draggable">
+          <img src="img/ayaka2022.webp" />
+        </div>
 
-    <div id="weak" class="draggable">
-      <img src="img/weak.jpg" />
-    </div>
-
-    <div id="v" class="draggable">
-      <img src="img/v.jpg" />
-    </div>
-
-    <div id="ical" class="draggable">
-      <img src="img/ical99.jpg" />
-    </div>
-
-    <div id="ayaka" class="draggable">
-      <img src="img/ayaka2022.webp" />
-    </div>
-
-    <!-- <div id="ical01" class="draggable">
+        <!-- <div id="ical01" class="draggable">
       <img src="img/parakanxfaishal.png" />
     </div> -->
 
-    <div id="ppt" class="draggable">
-      <img src="img/ppt.jpeg" />
-    </div>
+        <div id="ppt" class="draggable">
+          <img src="img/ppt.jpeg" />
+        </div>
 
-    <div id="scan" class="draggable">
-      <img src="img/w scan.jpeg" />
-    </div>
+        <div id="scan" class="draggable">
+          <img src="img/w scan.jpeg" />
+        </div>
 
-    <div id="masuke" class="draggable">
-      <img src="img/e.gif" />
-    </div>
+        <div id="masuke" class="draggable">
+          <img src="img/e.gif" />
+        </div>
 
-    <div id="ibuk" class="draggable">
-      <img src="img/26.png" />
-    </div>
+        <div id="ibuk" class="draggable">
+          <img src="img/26.png" />
+        </div>
 
-    <!-- <div id="sukatani" class="draggable">
+        <!-- <div id="sukatani" class="draggable">
       <img src="img/sktn.jpeg" />
     </div> -->
+      </div>
+    </section>
+
+    <!-- second section -->
+    <section class="section"> 
+      <h1 style="color: white"></h1>
+      <div id class="fadein">
+
+        <div class=" fadein container">
+        <div style="font-size: 14px; " class="centered-w">
+            <div class="mobile2"></div>
 
 
-  </div>
+            <a href="index.html" target="" class="none1">
+                <h3>khindy zharifany</h3>
+            </a>
+            <a href="mailto:zharifanny@proton.me" target="_blank" class="none">zharifanny@proton.me </a>
 
-  </section>
+            <h2>
+               
 
-  <section class="section">
-  <h1 style="color:white"></h1>
-</section>
+                <a href="https://egpu.io/forums/profile/zharifanny/" target="" class="none">egpu </a>
+                <br>
+                <a href="https://github.com/zharifanny" target="" class="none">git </a>
+                <br>
+                <a href="https://www.instagram.com/forssellfrtz/" target="none" class="none">cg </a>
+                <br>
 
-  <!-- Add more image elements as needed -->
-  </div>
-  </div>
+                
+                
 
-  <script src="src/js/bringtofront.js"></script>
+            </h2>
 
-  <div style="z-index: 999; background-color: #000000" id="footer">
-    <br />
-    <a href="about/" style="font-family: 'Times New Roman', Times, serif; font-size: 14px; color: aliceblue;" class="footermain">© 2024
-      forssellfritz/khindy zharifany, attribution</a>
-    <br /><br />
-  </div>
 
-  <script>
-    interact('.draggable')
-      .on('tap', function (event) {
-        console.log('Single-tap event triggered');
+            <div class="mobile3"></div>
+        </div>
+    </div>
 
-        event.currentTarget.classList.toggle('switch-bg');
-        event.preventDefault();
-      })
+      </div>
+                
+    </section>
 
-      .on('doubletap', function (event) {
-        console.log('Double-tap event triggered');
-        event.currentTarget.classList.toggle('large');
-        event.currentTarget.classList.remove('rotate');
-        event.preventDefault();
-      })
-      
-      .on('hold', function (event) {
-        event.currentTarget.classList.toggle('rotate');
-        event.currentTarget.classList.remove('large');
-      });
+    <script src="src/js/bringtofront.js"></script>
+
+    <div style="z-index: 999; background-color: #000000" id="footer">
+      <br />
+      <a
+        href="about/"
+        style="
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 14px;
+          color: aliceblue;
+        "
+        class="footermain">© 2026 forssellfritz/khindy zharifany, free
+        palestine, free the
+        oppressed, attribution</a>
+      <br /><br />
+    </div>
+
+    <script>
+      interact(".draggable")
+        .on("tap", function (event) {
+          console.log("Single-tap event triggered");
+
+          event.currentTarget.classList.toggle("switch-bg");
+          event.preventDefault();
+        })
+
+        .on("doubletap", function (event) {
+          console.log("Double-tap event triggered");
+          event.currentTarget.classList.toggle("large");
+          event.currentTarget.classList.remove("rotate");
+          event.preventDefault();
+        })
+
+        .on("hold", function (event) {
+          event.currentTarget.classList.toggle("rotate");
+          event.currentTarget.classList.remove("large");
+        });
 
       //FUCK VERCEL FOR OPENLY SUPPORT FOR PALESTINE GENOCIDE, FREE PALESTINE, FREE THE OPPRESSED
 
-    interact('.item').draggable({
-      listeners: {
-        move(event) {
-          console.log(event.pageX, event.pageY);
-        }
+      interact(".item").draggable({
+        listeners: {
+          move(event) {
+            console.log(event.pageX, event.pageY);
+          },
+        },
+      });
+    </script>
+
+    <script>
+      // Initialize Lenis
+      const lenis = new Lenis({
+        // duration: 0.2,              // kecepatan scroll
+        lerp: 1,
+        easing: (t) => t * (2 - t), // easing natural
+        smooth: true,
+        direction: "vertical",
+      });
+
+      // animate Lenis
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
       }
-    })
-      ;
-  </script>
 
+      requestAnimationFrame(raf);
 
-<script>
-  // Initialize Lenis
-  const lenis = new Lenis({
-    // duration: 0.2,              // kecepatan scroll
-    lerp: 1,
-    easing: (t) => t*(2-t),     // easing natural
-    smooth: true,
-    direction: 'vertical'
-  });
+      // optional: listen scroll
+      lenis.on("scroll", (e) => {
+        console.log("scroll y:", e.scroll);
+      });
+    </script>
 
-  // animate Lenis
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-
-  requestAnimationFrame(raf);
-
-  // optional: listen scroll
-  lenis.on('scroll', (e) => {
-    console.log('scroll y:', e.scroll);
-  });
-</script>
-
-
-<!-- <script>
+    <!-- <script>
 const sections = document.querySelectorAll('.section');
 let snapTimeout = null;
 
@@ -233,8 +291,39 @@ lenis.on('scroll', (e) => {
 });
 </script> -->
 
+<!-- Skrip kursor -->
+    <!-- <script>
+      const cursor = document.getElementById("cursor");
+      let mouseX = 0,
+        mouseY = 0;
+      let posX = 0,
+        posY = 0;
 
-<!-- <script>
+      // Track mouse
+      document.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      // Smooth follow
+      function animate() {
+        posX += (mouseX - posX) * 0.1;
+        posY += (mouseY - posY) * 0.1;
+        cursor.style.transform = `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      // Optional: scale cursor on click
+      document.addEventListener("mousedown", () =>
+        cursor.classList.add("active")
+      );
+      document.addEventListener("mouseup", () =>
+        cursor.classList.remove("active")
+      );
+    </script> -->
+
+    <!-- <script>
   // Initialize Lenis
 const lenis = new Lenis({
   autoRaf: true,
@@ -245,7 +334,5 @@ lenis.on('scroll', (e) => {
   console.log(e);
 });
 </script> -->
-
-</body>
-
+  </body>
 </html>
