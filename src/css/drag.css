@@ -406,7 +406,7 @@ html, body {
 
 #lock
 {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 /* 
 .tap-target {
